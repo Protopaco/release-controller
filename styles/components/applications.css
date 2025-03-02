@@ -1,0 +1,29 @@
+.applicationList {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.applicationListItem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+.releaseTicketLink {
+    font-size: 1.2em;
+}
+
+.application-button {
+    height: 100%;
+    align-self: end;
+    margin-left: 5px;
+}

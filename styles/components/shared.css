@@ -1,0 +1,6 @@
+.lineBreak {
+    border: 0;
+    height: 1px;
+    background: var(--secondary-color);
+    margin: 10px 0;
+}

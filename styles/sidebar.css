@@ -1,0 +1,30 @@
+.sidebar {
+    width: 140px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    font-size: 1.5em;
+    padding: 10px;
+    border-right: solid var(--secondary-color);
+
+}
+
+li.category {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 0;
+    border: var(--secondary-color);
+    border-radius: 4px;
+}
+
+li.category:hover,
+.active {
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-color-highlight);
+    padding-left: 2px;
+}
+
+.icon {
+    margin-right: 10px;
+}

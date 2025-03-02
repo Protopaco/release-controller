@@ -1,0 +1,16 @@
+.dropdown {
+    display: flex;
+    flex-direction: row;
+}
+
+.dropdown-frame {
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown-submit-button {
+    align-self: flex-end;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 85%;
+}

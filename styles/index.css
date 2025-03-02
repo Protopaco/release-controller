@@ -1,0 +1,47 @@
+@import url("sidebar.css");
+@import url("globals.css");
+@import url("content.css");
+@import url("./components/components.css");
+
+body {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    color-scheme: dark;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    width: 100%;
+    box-sizing: border-box;
+    color-scheme: dark;
+}
+
+button {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: var(--text-color-dark);
+    background-color: var(--secondary-color);
+    box-sizing: border-box;
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+a {
+    color: var(--text-color-highlight)
+}

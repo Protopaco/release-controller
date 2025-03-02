@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "CCI Release Controller",
+  "description": "Automates Release Activities",
+  "version": "0.1",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "web_accessible_resources"
+  ],
+  "action": {
+    "default_title": "Lets Release Some Code!",
+    "default_popup": "index.html"
+  }
+}

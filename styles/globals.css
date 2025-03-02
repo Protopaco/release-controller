@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #1e1e1e;
+  --primary-color-light: #383838;
+  --secondary-color: #efa51a;
+  --secondary-color-light: #4a4a4a;
+  --text-color-light: #ffffff;
+  --text-color-highlight: #ffcb2f;
+  --text-color-dark: #000000;
+}
+
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../icons/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../icons/MaterialIconsOutlined-Regular.otf ) format('opentype');
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

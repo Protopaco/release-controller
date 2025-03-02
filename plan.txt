@@ -1,0 +1,25 @@
+Current Features:
+
+Create Version
+Get List of Applications in Release
+Get list of Projects in Release
+Create New REL tickets for each application
+-Add Epic
+-Application
+-Fix Version
+-Type: Application
+-Relates To Proj Tickets
+-Tag relevant teams
+
+
+Future Features:
+
+Update Releases in other projects
+Create Runbooks
+Create Slack updates
+- includes teams
+- includes issues
+"Release" releases
+Update on tickets in Fix Version that are not "complete"
+-Create Dashboards
+application/team lookup

@@ -1,0 +1,40 @@
+.fixVersionList {
+    overflow: scroll;
+}
+
+.versionName {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+.fixVersionInputDateFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.fixVersionInputDatesFrame {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.fixVersionInputNameFrame {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 10px;
+}
+
+.fixVersionButton {
+    align-self: center;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.addfixVersionInputFrame {
+    transition: all 2s ease-in-out;
+    margin-top: 10px;
+}
