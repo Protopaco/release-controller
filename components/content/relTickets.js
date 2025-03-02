@@ -5,8 +5,8 @@ import lineBreak from "../shared/lineBreak.js";
 
 export const fixVersionDropDown = (selectId, fixVersionSearchFunction, createRelFunction) => {
 
-    const applicationDropDownFrame = document.createElement('div');
-    applicationDropDownFrame.classList.add('dropdown-frame');
+    const relTicketDropDownFrame = document.createElement('div');
+    relTicketDropDownFrame.classList.add('dropdown-frame');
 
     const fixVersions = getAllFixVersions();
     const fixVersionOptions = convertFixVersionsToOptions(fixVersions);
@@ -16,51 +16,51 @@ export const fixVersionDropDown = (selectId, fixVersionSearchFunction, createRel
     searchButton.textContent = 'Search';
     searchButton.addEventListener('click', fixVersionSearchFunction);
     searchButton.id = 'dropdown-search-button';
-    searchButton.classList.add('application-button');
+    searchButton.classList.add('rel-ticket-button');
     dropDownElement.appendChild(searchButton);
 
     const createReleaseTicketsButton = document.createElement('button');
     createReleaseTicketsButton.textContent = 'Create REL';
     createReleaseTicketsButton.id = 'create-release-tickets-button';
-    createReleaseTicketsButton.classList.add('application-button');
+    createReleaseTicketsButton.classList.add('rel-ticket-button');
     createReleaseTicketsButton.addEventListener('click', createRelFunction);
     dropDownElement.appendChild(createReleaseTicketsButton);
 
     const lineBreakElement = lineBreak();
-    applicationDropDownFrame.appendChild(dropDownElement);
-    applicationDropDownFrame.appendChild(lineBreakElement);
+    relTicketDropDownFrame.appendChild(dropDownElement);
+    relTicketDropDownFrame.appendChild(lineBreakElement);
 
-    return applicationDropDownFrame;
+    return relTicketDropDownFrame;
 }
 
-export const populateApplicationList = (applicationListId) => {
-    const listElement = document.getElementById(applicationListId);
-    const applications = getReleaseTicketsByFixVersion(fixVersionId);
-    applications.forEach(application => {
-        const listItem = applicationListItem(application);
+export const populateRelTicketList = (relTicketListId) => {
+    const listElement = document.getElementById(relTicketListId);
+    const relTickets = getReleaseTicketsByFixVersion(fixVersionId);
+    relTickets.forEach(relTicket => {
+        const listItem = relTicketListItem(relTicket);
         listElement.appendChild(listItem);
     });
 
-    applications.forEach(application => {
-        const listItem = applicationListItem(application);
+    relTickets.forEach(relTicket => {
+        const listItem = relTicketListItem(relTicket);
         listElement.appendChild(listItem);
     });
 
     return listElement;
 }
 
-export const applicationListItem = (application) => {
+export const relTicketListItem = (relTicket) => {
     const listItem = document.createElement('li');
-    listItem.classList.add('applicationListItem');
+    listItem.classList.add('relTicketListItem');
 
-    const applicationName = document.createElement('h3');
-    applicationName.textContent = application.name;
-    listItem.appendChild(applicationName);
+    const relTicketName = document.createElement('h3');
+    relTicketName.textContent = relTicket.name;
+    listItem.appendChild(relTicketName);
 
     const releaseTicketLink = document.createElement('a');
     releaseTicketLink.classList.add('releaseTicketLink');
-    releaseTicketLink.textContent = application.releaseTicketKey;
-    releaseTicketLink.href = application.releaseTicketUrl;
+    releaseTicketLink.textContent = relTicket.releaseTicketKey;
+    releaseTicketLink.href = relTicket.releaseTicketUrl;
     listItem.appendChild(releaseTicketLink);
 
     return listItem;

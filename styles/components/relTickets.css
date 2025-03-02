@@ -1,11 +1,16 @@
-.applicationList {
+.releaseTicketLink {
+    font-size: 1.2em;
+}
+
+
+.relTicketList {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.applicationListItem {
+.relTicketListItem {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -18,11 +23,7 @@
     color: var(--text-color-light);
 }
 
-.releaseTicketLink {
-    font-size: 1.2em;
-}
-
-.application-button {
+.rel-ticket-button {
     height: 100%;
     align-self: end;
     margin-left: 5px;

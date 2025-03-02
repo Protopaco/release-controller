@@ -1,5 +1,4 @@
-
-import { fixVersionButton, applicationButton, projectsButton } from "./category.js";
+import { fixVersionButton, relTicketButton, projectsButton } from "./category.js";
 
 export const setUpSidebar = () => {
     const fixVersionCategory = document.getElementById('fixVersionCategory');
@@ -9,12 +8,13 @@ export const setUpSidebar = () => {
         fixVersionButton()
     });
 
-    const applicationCategory = document.getElementById('applicationCategory');
-    applicationCategory.addEventListener('click', () => {
+    const relTicketCategory = document.getElementById('relTicketCategory');
+    relTicketCategory.addEventListener('click', () => {
         clearActiveClass();
-        applicationCategory.classList.toggle('active');
-        applicationButton()
+        relTicketCategory.classList.toggle('active');
+        relTicketButton()
     });
+
 
     const projectsCategory = document.getElementById('projectsCategory');
     projectsCategory.addEventListener('click', () => {

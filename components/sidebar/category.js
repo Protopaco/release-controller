@@ -1,4 +1,4 @@
-import { fixVersionDropDown, populateApplicationList } from "../content/applications.js";
+import { fixVersionDropDown, populateRelTicketList } from "../content/relTickets.js";
 import { loadContent } from "../content/content.js";
 import { addFixVersionButton, populateFixVersionList } from "../content/fixVersion.js";
 import { getReleaseTicketsByFixVersion, getAllFixVersions } from "../../controllers/fixVersionController.js";
@@ -19,35 +19,35 @@ export const fixVersionButton = () => {
     fixVersionList.appendChild(addFVButton);
 }
 
-export const applicationButton = () => {
+export const relTicketButton = () => {
     const selectId = 'fix-version';
-    const applicationListId = 'application-list';
-    const applicationContentId = 'application-content-list';
+    const relTicketListId = 'rel-ticket-list';
+    const relTicketContentId = 'rel-ticket-content-list';
 
     const fixVersionSearchFunction = () => {
         const fixVersionId = document.getElementById(selectId).value;
-        removeAllChildElements(applicationListId);
-        const applications = getReleaseTicketsByFixVersion(fixVersionId);
-        populateApplicationList(applications, applicationListId);
+        removeAllChildElements(relTicketListId);
+        const relTickets = getReleaseTicketsByFixVersion(fixVersionId);
+        populateRelTicketList(relTickets, relTicketListId);
     }
 
     const createRelFunction = () => {
         const fixVersionId = document.getElementById(selectId).value;
         createReleaseTickets(fixVersionId);
-        removeAllChildElements(applicationListId);
-        populateApplicationList(applications, applicationListId);
+        removeAllChildElements(relTicketListId);
+        populateRelTicketList(relTickets, relTicketListId);
     }
 
-    console.log('applicationButton');
+    console.log('relTicketButton');
     const listElement = document.createElement('ul');
-    listElement.classList.add('applicationContentList');
-    listElement.id = applicationContentId;
+    listElement.classList.add('relTicketContentList');
+    listElement.id = relTicketContentId;
     const fixVersionDropDownElement = fixVersionDropDown(selectId, fixVersionSearchFunction, createRelFunction);
     listElement.appendChild(fixVersionDropDownElement);
-    const applicationListElement = document.createElement('ul');
-    applicationListElement.classList.add('applicationList');
-    applicationListElement.id = applicationListId;
-    listElement.appendChild(applicationListElement);
+    const relTicketListElement = document.createElement('ul');
+    relTicketListElement.classList.add('relTicketList');
+    relTicketListElement.id = relTicketListId;
+    listElement.appendChild(relTicketListElement);
     loadContent(listElement);
 }
 
